@@ -2,6 +2,7 @@
 SoftUni Jun22
 
 Learning topics:
+
 1.Inheritance
 
 2.Encapsulation
