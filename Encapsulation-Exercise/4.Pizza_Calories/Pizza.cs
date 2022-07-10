@@ -4,13 +4,13 @@ using System.Text;
 
 namespace _4.Pizza_Calories
 {
-    public class Pizza 
+    public class Pizza
     {
         private string name;
         private Dough dough;
         private List<Topping> toppings;
-      
-        public Pizza(string pizzaName,Dough dough) 
+
+        public Pizza(string pizzaName, Dough dough)
         {
             this.Name = pizzaName;
             this.Dough = dough;
@@ -21,18 +21,14 @@ namespace _4.Pizza_Calories
             get => this.name;
             private set
             {
-                if (string.IsNullOrEmpty(value) || string.IsNullOrWhiteSpace(value))
-                {
-                    throw new Exception("Pizza name should be between 1 and 15 symbols.");
-                }
-                else if (value.Length < 1 || value.Length > 15)
+                if (string.IsNullOrWhiteSpace(value) || value.Length < 1 || value.Length > 15)
                 {
                     throw new Exception("Pizza name should be between 1 and 15 symbols.");
                 }
                 this.name = value;
             }
         }
-        public Dough Dough 
+        public Dough Dough
         {
             set
             {
@@ -42,7 +38,7 @@ namespace _4.Pizza_Calories
         public int ToppingsCount { get => this.toppings.Count; }
         public bool AddTopping(Topping topping)
         {
-            if (toppings.Count<10)
+            if (toppings.Count < 10)
             {
                 toppings.Add(topping);
                 return true;
@@ -56,7 +52,7 @@ namespace _4.Pizza_Calories
             {
                 result += topping.Calories();
             }
-           
+
             return result;
         }
 

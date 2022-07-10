@@ -46,7 +46,6 @@ namespace _4.Pizza_Calories
                 value = value.Insert(0, newChar.ToString());
                 if (modifierType.ContainsKey(value))
                 {
-
                     this.type = value;
                 }
                 else
