@@ -1,5 +1,4 @@
-﻿
-namespace Wild_Farm.Models.Foods
+﻿namespace Wild_Farm.Models.Foods
 {
     public class Vegetable : Food
     {

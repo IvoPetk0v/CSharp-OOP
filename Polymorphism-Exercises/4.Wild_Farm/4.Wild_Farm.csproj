@@ -6,9 +6,4 @@
     <RootNamespace>Wild_Farm</RootNamespace>
   </PropertyGroup>
 
-  <ItemGroup>
-    <Folder Include="Factories\" />
-    <Folder Include="Core\" />
-  </ItemGroup>
-
 </Project>
