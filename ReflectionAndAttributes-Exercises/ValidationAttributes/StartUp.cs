@@ -1,20 +1,20 @@
-﻿using System;
-
-namespace ValidationAttributes
+﻿namespace ValidationAttributes
 {
+    using System;
+    using Models;
     public class StartUp
     {
         public static void Main(string[] args)
         {
-            //var person = new Person
-            // (
-            //     null,
-            //     -1
-            // );
+            var person = new Person
+             (
+                 "Gosho",
+                 22
+             );
 
-            //bool isValidEntity = Validator.IsValid(person);
+            bool isValidEntity = Validator.IsValid(person);
 
-            //Console.WriteLine(isValidEntity);
+            Console.WriteLine(isValidEntity);
         }
     }
 }
