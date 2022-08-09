@@ -1,0 +1,12 @@
+﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=6e1b915d_002Dd686_002D40f5_002Dbb24_002D2d3b761708ba/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="CountShouldReturnActualCount" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::5795F810-87D3-4FC9-89B3-61985EE6F92B::.NETCoreApp,Version=v3.1::Database.Tests.DatabaseTests.CountShouldReturnActualCount&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::5795F810-87D3-4FC9-89B3-61985EE6F92B::.NETCoreApp,Version=v3.1::Database.Tests.DatabaseTests.AddShouldThrowExceptionWhenAddingMoreThan16Elements&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::5795F810-87D3-4FC9-89B3-61985EE6F92B::.NETCoreApp,Version=v3.1::Database.Tests.DatabaseTests.ConstructorShouldAddLessThan17Elements&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::5795F810-87D3-4FC9-89B3-61985EE6F92B::.NETCoreApp,Version=v3.1::Database.Tests.DatabaseTests.ConstructorShouldNotAllowOverExceedMaxCount&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::5795F810-87D3-4FC9-89B3-61985EE6F92B::.NETCoreApp,Version=v3.1::Database.Tests.DatabaseTests.CountShouldReturnZeroWhenNoElementsInDatabase&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::5795F810-87D3-4FC9-89B3-61985EE6F92B::.NETCoreApp,Version=v3.1::Database.Tests.DatabaseTests.AddShouldAddLessThan17Elements&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::5795F810-87D3-4FC9-89B3-61985EE6F92B::.NETCoreApp,Version=v3.1::Database.Tests.DatabaseTests.RemoveShouldRemoveTheLastElementSuccessfully&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>
