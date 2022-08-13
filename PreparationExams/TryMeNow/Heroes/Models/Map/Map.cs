@@ -11,6 +11,7 @@ namespace Heroes.Models.Map
     {
         private  ICollection<Knight> knights = new List<Knight>();
         private ICollection<Barbarian> barbarians = new List<Barbarian>();
+
         public string Fight(ICollection<IHero> players)
         {
             this.knights = players.OfType<Knight>().Where(k=>k.IsAlive==true).ToList();

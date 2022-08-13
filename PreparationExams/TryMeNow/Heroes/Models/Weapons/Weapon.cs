@@ -1,18 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
+
 using Heroes.Models.Contracts;
-using Heroes.Utilities.WeaponsExceptions;
-using Utilities;
 
 namespace Heroes.Models.Weapons
 {
-    using Utilities;
-
-    public abstract class Weapon : WeaponExceptionMessages, IWeapon
+    public abstract class Weapon : IWeapon
     {
-        internal WeaponExceptionMessages excMsg;
-
         private string name;
         private int durability;
 
@@ -29,7 +22,7 @@ namespace Heroes.Models.Weapons
             {
                 if (string.IsNullOrWhiteSpace(value))
                 {
-                    excMsg.WeaponNameException();
+                    throw new ArgumentException("Weapon type cannot be null or empty.");
                 }
                 this.name = value;
             }
@@ -41,7 +34,7 @@ namespace Heroes.Models.Weapons
             {
                 if (value < 0)
                 {
-                    excMsg.WeaponDurabilityException();
+                    throw new ArgumentException("Durability cannot be below 0.");
                 }
                 this.durability = value;
             }

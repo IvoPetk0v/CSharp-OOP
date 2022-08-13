@@ -1,20 +1,17 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
+
 using Heroes.Models.Contracts;
-using Heroes.Models.Weapons;
-using Heroes.Utilities;
-using Utilities;
+
+
 
 namespace Heroes.Models.Heroes
 {
-    public abstract class Hero : HeroExceptionMessages, IHero
+    public abstract class Hero : IHero
     {
-        private readonly HeroExceptionMessages exc;
         private string name;
         private int health;
         private int armour;
-        private bool isAlive;
+        private bool isAlive = true;
         private IWeapon weapon;
 
 
@@ -22,7 +19,7 @@ namespace Heroes.Models.Heroes
         {
             this.Name = name;
             this.Health = health;
-            this.armour = armour;
+            this.Armour = armour;
         }
 
         public string Name
@@ -32,7 +29,7 @@ namespace Heroes.Models.Heroes
             {
                 if (string.IsNullOrWhiteSpace(value))
                 {
-                    this.exc.HeroNameException();
+                    throw new ArgumentException("Hero name cannot be null or empty.");
                 }
 
                 this.name = value;
@@ -46,7 +43,7 @@ namespace Heroes.Models.Heroes
             {
                 if (value < 0)
                 {
-                    this.exc.HeroHealthException();
+                    throw new ArgumentException("Hero health cannot be below 0.");
                 }
                 this.health = value;
             }
@@ -59,7 +56,7 @@ namespace Heroes.Models.Heroes
             {
                 if (value < 0)
                 {
-                    this.exc.HeroArmorException();
+                    throw new ArgumentException("Hero armour cannot be below 0.");
                 }
                 this.armour = value;
             }
@@ -86,7 +83,7 @@ namespace Heroes.Models.Heroes
             {
                 if (value == null)
                 {
-                    this.exc.HeroNoWeaponException();
+                    throw new ArgumentException("Weapon cannot be null.");
                 }
                 this.weapon = value;
             }
@@ -98,9 +95,10 @@ namespace Heroes.Models.Heroes
             {
                 this.armour = 0;
                 this.health -= points;
-                if (!this.IsAlive)
+                if (this.health <= 0)
                 {
                     this.health = 0;
+                    this.isAlive = false;
                 }
                 return;
             }
@@ -111,6 +109,14 @@ namespace Heroes.Models.Heroes
         public void AddWeapon(IWeapon weapon)
         {
             this.Weapon = weapon;
+        }
+
+        public override string ToString()
+        {
+            return $"{this.GetType().Name}: {this.Name}{Environment.NewLine}" +
+                   $"--Health: {this.Health}{Environment.NewLine}" +
+                   $"--Armour: {this.Armour}{Environment.NewLine}" +
+                   $"--Weapon: {(this.Weapon == null ? "Unarmed" : this.Weapon.Name)}".ToString();
         }
     }
 }

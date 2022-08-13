@@ -11,24 +11,27 @@ namespace Heroes.Repositories
     using Contracts;
     public class HeroRepository : IRepository<IHero>
     {
-        private readonly ICollection<IHero> models = new Collection<IHero>();
+        private readonly List<IHero> heroes;
 
-
-        public IReadOnlyCollection<IHero> Models => this.models.ToList();
+        public HeroRepository()
+        {
+            this.heroes = new List<IHero>();
+        }
+        public IReadOnlyCollection<IHero> Models => this.heroes;
 
         public void Add(IHero model)
         {
-            this.models.Add(model);
+            this.heroes.Add(model);
         }
 
         public bool Remove(IHero model)
         {
-            return this.models.Remove(model);
+            return this.heroes.Remove(model);
         }
 
         public IHero FindByName(string name)
         {
-            return this.models.FirstOrDefault(m=>m.Name==name);
+            return this.heroes.FirstOrDefault(m=>m.Name==name);
         }
     }
 }
