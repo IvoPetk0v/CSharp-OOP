@@ -1,27 +1,27 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using Heroes.Models.Contracts;
-using Heroes.Models.Heroes;
 
 namespace Heroes.Repositories
 {
     using Contracts;
     public class HeroRepository : IRepository<IHero>
     {
-        private readonly List<IHero> heroes;
+        private readonly ICollection<IHero> heroes;
 
         public HeroRepository()
         {
             this.heroes = new List<IHero>();
         }
-        public IReadOnlyCollection<IHero> Models => this.heroes;
+        public IReadOnlyCollection<IHero> Models => this.heroes.ToList();
 
         public void Add(IHero model)
         {
-            this.heroes.Add(model);
+            if (!heroes.Contains(model))
+            {
+                this.heroes.Add(model);
+            }
+            
         }
 
         public bool Remove(IHero model)

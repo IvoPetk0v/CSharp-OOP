@@ -37,15 +37,7 @@ namespace Heroes.Core
                 nameof(Barbarian) => new Barbarian(name, health, armour),
                 _ => throw new InvalidOperationException("Invalid hero type.")
             };
-            try
-            {
-                this.heroes.Add(hero);
-            }
-            catch (ArgumentException e)
-            {
-                return e.Message.ToString();
-            }
-
+            this.heroes.Add(hero);
             string heroAlias = type == nameof(Knight)
                 ? $"Sir {hero.Name}"
                 : $"{nameof(Barbarian)} {hero.Name}";

@@ -1,8 +1,5 @@
 ﻿using System;
-
 using Heroes.Models.Contracts;
-
-
 
 namespace Heroes.Models.Heroes
 {
@@ -11,7 +8,7 @@ namespace Heroes.Models.Heroes
         private string name;
         private int health;
         private int armour;
-        private bool isAlive = true;
+        private bool isAlive;
         private IWeapon weapon;
 
 
@@ -20,6 +17,8 @@ namespace Heroes.Models.Heroes
             this.Name = name;
             this.Health = health;
             this.Armour = armour;
+            this.isAlive = true;
+            this.weapon = null;
         }
 
         public string Name

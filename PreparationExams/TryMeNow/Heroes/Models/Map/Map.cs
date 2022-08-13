@@ -9,14 +9,14 @@ namespace Heroes.Models.Map
 {
     public class Map : IMap
     {
-        private  ICollection<Knight> knights = new List<Knight>();
+        private ICollection<Knight> knights = new List<Knight>();
         private ICollection<Barbarian> barbarians = new List<Barbarian>();
 
         public string Fight(ICollection<IHero> players)
         {
-            this.knights = players.OfType<Knight>().Where(k=>k.IsAlive==true).ToList();
-               
-            this.barbarians = players.OfType<Barbarian>().Where(b => b.IsAlive==true).ToList();
+            this.knights = players.OfType<Knight>().Where(k => k.IsAlive == true).ToList();
+
+            this.barbarians = players.OfType<Barbarian>().Where(b => b.IsAlive == true).ToList();
             string result;
             while (knights.Any(k => k.IsAlive) && barbarians.Any(b => b.IsAlive))
             {
@@ -30,7 +30,6 @@ namespace Heroes.Models.Map
                             {
                                 barb.TakeDamage(knight.Weapon.DoDamage());
                             }
-
                         }
                     }
                 }
