@@ -68,9 +68,57 @@ namespace RepairShop.Tests
                 {
                     this.garage.AddCar(car);
                 }
-                Assert.AreEqual(n,this.garage.CarsInGarage);
+                Assert.AreEqual(n, this.garage.CarsInGarage);
             }
 
+            [TestCase("Fail")]
+            [TestCase("NeverSeen")]
+            public void FixCarShouldThrowExceptionWhenInputModelIsNotFound(string name)
+            {
+                this.garage.AddCar(car);
+                this.garage.AddCar(new Car("Opel", 3));
+                Assert.Throws<InvalidOperationException>(() =>
+                    garage.FixCar(name),
+                    $"The car {name} doesn't exist.");
+            }
+
+            [Test]
+            public void FixCarShouldResetTo0NumberOfIssuesCarPropIfModelIsFound()
+            {
+                this.garage.AddCar(car);
+                this.garage.FixCar(car.CarModel);
+                Assert.AreEqual(0, this.car.NumberOfIssues);
+            }
+
+            [Test]
+            public void RemoveFixedCarsShouldThrowExceptionIfThereIsNoFixedCars()
+            {
+                garage.AddCar(car);
+                Assert.Throws<InvalidOperationException>(() =>
+                    garage.RemoveFixedCar(),
+                    "No fixed cars available.");
+            }
+            [Test]
+            public void RemoveFixedCarsShouldRemoveAllFixedCars()
+            {
+                garage.AddCar(car);
+                garage.AddCar(new Car("Opel",2));
+                garage.FixCar("Mazda");
+                garage.FixCar("Opel");
+                garage.RemoveFixedCar();
+                Assert.AreEqual(0,garage.CarsInGarage);
+            }
+
+            [Test]
+            public void ReportShouldReturnStringTheListOfNotFixedCarInGarage()
+            {
+                garage.AddCar(car);
+                garage.AddCar(new Car("BMW",30));
+                garage.AddCar(new Car("Opel",2));
+                garage.FixCar("Opel");
+                Assert.AreEqual("There are 2 which are not fixed: Mazda, BMW.",garage.Report());
+
+            }
         }
     }
 }
