@@ -7,8 +7,8 @@ namespace Heroes.Repositories
 {
     public class WeaponRepository : IRepository<IWeapon>
     {
-        private readonly ICollection<IWeapon> models;
-        public IReadOnlyCollection<IWeapon> Models => this.models.ToList();
+        private readonly List<IWeapon> models;
+        public IReadOnlyCollection<IWeapon> Models => this.models.AsReadOnly();
 
         public WeaponRepository()
         {

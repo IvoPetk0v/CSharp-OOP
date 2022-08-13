@@ -7,13 +7,13 @@ namespace Heroes.Repositories
     using Contracts;
     public class HeroRepository : IRepository<IHero>
     {
-        private readonly ICollection<IHero> heroes;
+        private readonly List<IHero> heroes;
 
         public HeroRepository()
         {
             this.heroes = new List<IHero>();
         }
-        public IReadOnlyCollection<IHero> Models => this.heroes.ToList();
+        public IReadOnlyCollection<IHero> Models => this.heroes.AsReadOnly();
 
         public void Add(IHero model)
         {
