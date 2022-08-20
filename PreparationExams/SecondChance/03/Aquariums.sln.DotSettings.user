@@ -1,0 +1,19 @@
+﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=4065d241_002D75e7_002D406d_002D8708_002D8044dc9995f5/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="PropNameShouldNotBeEmptyOrNull #2" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::646C24EC-2751-4BF2-A3A5-2CFD7EA92785::.NETCoreApp,Version=v3.0::Aquariums.Tests.AquariumsTests.PropNameShouldNotBeEmptyOrNull&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::646C24EC-2751-4BF2-A3A5-2CFD7EA92785::.NETCoreApp,Version=v3.0::Aquariums.Tests.AquariumsTests.PropCountShouldReturnCorrectlyValue&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::646C24EC-2751-4BF2-A3A5-2CFD7EA92785::.NETCoreApp,Version=v3.0::Aquariums.Tests.AquariumsTests.PropCapacityShouldNotBeNegativeNumber&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::646C24EC-2751-4BF2-A3A5-2CFD7EA92785::.NETCoreApp,Version=v3.0::Aquariums.Tests.AquariumsTests.AddShouldThrowExceptionWhenCapacityIsReached&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::646C24EC-2751-4BF2-A3A5-2CFD7EA92785::.NETCoreApp,Version=v3.0::Aquariums.Tests.AquariumsTests.RemoveShouldThrowExceptionWhenNoFish&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::646C24EC-2751-4BF2-A3A5-2CFD7EA92785::.NETCoreApp,Version=v3.0::Aquariums.Tests.AquariumsTests.RemoveShouldRemoveByName&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::646C24EC-2751-4BF2-A3A5-2CFD7EA92785::.NETCoreApp,Version=v3.0::Aquariums.Tests.AquariumsTests.RequestFishShouldReturnFishByName&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::646C24EC-2751-4BF2-A3A5-2CFD7EA92785::.NETCoreApp,Version=v3.0::Aquariums.Tests.AquariumsTests.SellFishShouldThrowExceptionIfNoFishWithThatName&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::646C24EC-2751-4BF2-A3A5-2CFD7EA92785::.NETCoreApp,Version=v3.0::Aquariums.Tests.AquariumsTests.ReportShouldReturnStringCorrectly&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=5126e84e_002D8c07_002D42c4_002D9500_002D87d8c72c589d/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="PropNameShouldNotBeEmptyOrNull" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::646C24EC-2751-4BF2-A3A5-2CFD7EA92785::.NETCoreApp,Version=v3.0::Aquariums.Tests.AquariumsTests.PropNameShouldNotBeEmptyOrNull&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>
