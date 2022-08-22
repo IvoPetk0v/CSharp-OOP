@@ -1,0 +1,12 @@
+﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=9340b342_002Dadae_002D4ca7_002D8ae9_002Df95b38b3cb73/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="RoomBedCapacityShouldBeMoreThan0" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::349E67F1-AED7-44E1-859C-CC8BC348CE14::.NETCoreApp,Version=v3.1::BookigApp.Tests.Tests.RoomBedCapacityShouldBeMoreThan0&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::349E67F1-AED7-44E1-859C-CC8BC348CE14::.NETCoreApp,Version=v3.1::BookigApp.Tests.Tests.RoomPricePerNightShouldBeMoreThan0&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::349E67F1-AED7-44E1-859C-CC8BC348CE14::.NETCoreApp,Version=v3.1::BookigApp.Tests.Tests.NameShouldThrowExceptionWhenNullOrWhitespace&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::349E67F1-AED7-44E1-859C-CC8BC348CE14::.NETCoreApp,Version=v3.1::BookigApp.Tests.Tests.CategoryShouldBeBetween1And5&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::349E67F1-AED7-44E1-859C-CC8BC348CE14::.NETCoreApp,Version=v3.1::BookigApp.Tests.Tests.AddRoomShouldWorkProperly&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::349E67F1-AED7-44E1-859C-CC8BC348CE14::.NETCoreApp,Version=v3.1::BookigApp.Tests.Tests.BookingRoomShouldThrowExceptionIfDurationIsLessThan1&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::349E67F1-AED7-44E1-859C-CC8BC348CE14::.NETCoreApp,Version=v3.1::BookigApp.Tests.Tests.BookingRoomShouldBookRoomWithProperBedCapacity&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>
